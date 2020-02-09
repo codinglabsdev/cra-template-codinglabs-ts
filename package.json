@@ -38,8 +38,7 @@
     "test": "react-app-rewired test",
     "lint": "lint-staged",
     "coverage": "react-app-rewired test --coverage --watchAll=false",
-    "eject": "react-scripts eject",
-    "dist": ""
+    "eject": "react-scripts eject"
   },
   "husky": {
     "hooks": {
