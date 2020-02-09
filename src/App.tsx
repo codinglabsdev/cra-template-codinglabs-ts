@@ -1,9 +1,13 @@
 import React from 'react';
+import { Router } from 'react-router-dom';
 
-const App = () => (
-  <div className="App">
-    <header className="App-header">Coding Labs</header>
-  </div>
-);
+import Routes from '~/routes';
+import history from '~/services/history';
 
-export default App;
+export default function App() {
+  return (
+    <Router history={history}>
+      <Routes />
+    </Router>
+  );
+}

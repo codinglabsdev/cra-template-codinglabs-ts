@@ -23,7 +23,7 @@ module.exports = {
   },
   plugins: ['import', 'react', 'prettier'],
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': 'off',
     'react/jsx-filename-extension': ['warn', { extensions: ['.tsx', '.ts'] }],
     'import/prefer-default-export': 'off',
     'no-console': ['error', { allow: ['tron'] }],
