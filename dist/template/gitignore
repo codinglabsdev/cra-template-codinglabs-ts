@@ -12,7 +12,7 @@
 /build
 
 # dist
-/dist/template
+/dist/template/node_modules
 
 # misc
 .DS_Store

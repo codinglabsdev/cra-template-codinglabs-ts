@@ -4,17 +4,18 @@ import { useDispatch } from 'react-redux';
 import { FaGithub } from 'react-icons/fa';
 import { Container, Footer } from './styles';
 
+import * as NotificationActions from '~/store/ducks/Notification/actions';
+
 export default function App() {
   const dispatch = useDispatch();
 
   function showNotification() {
-    dispatch({
-      type: 'ADD_NOTIFICATION',
-      data: {
+    dispatch(
+      NotificationActions.addNotification({
         type: 'success',
-        content: 'Hello World!',
-      },
-    });
+        message: 'Hello World!',
+      })
+    );
   }
 
   return (
