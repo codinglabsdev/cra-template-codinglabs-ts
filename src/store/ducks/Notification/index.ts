@@ -1,26 +1,17 @@
-import { createActions, createReducer } from 'reduxsauce';
-import Immutable, { ImmutableObject } from 'seamless-immutable';
-import { toast } from 'react-toastify';
-import { InitalStateInterface, addNotificationInterface } from './types';
+import { Reducer } from 'redux';
+import { NotificationState, NotificationType } from './types';
 
-const { Types, Creators } = createActions({
-  // Ducks
-  addNotification: ['data'],
-});
+const INITIAL_STATE: NotificationState = {};
 
-export const NotificationTypes = Types;
-export default Creators;
-
-export const INITIAL_STATE: ImmutableObject<InitalStateInterface> = Immutable(
-  {}
-);
-
-export const addNotification: addNotificationInterface = (state, { data }) => {
-  const { type, content } = data;
-  const id = toast[type](content);
-  return state.merge({ [id]: type, content });
+const reducer: Reducer<NotificationState> = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case NotificationType.ADD_NOTIFICATION:
+      return state;
+    case NotificationType.REQUEST_ERROR:
+      return state;
+    default:
+      return state;
+  }
 };
 
-export const reducer = createReducer(INITIAL_STATE, {
-  [Types.ADD_NOTIFICATION]: addNotification,
-});
+export default reducer;

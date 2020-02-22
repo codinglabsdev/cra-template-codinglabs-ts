@@ -1,13 +1,30 @@
-import { ImmutableObject } from 'seamless-immutable';
+/**
+ * Action types
+ */
 
-export type InitalStateInterface = {};
-
-export interface addNotificationInterface {
-  (
-    state: ImmutableObject<InitalStateInterface>,
-    action: {
-      type: 'ADD_NOTIFICATION';
-      data: { type: 'error' | 'warn' | 'success'; content: string };
-    }
-  ): ImmutableObject<InitalStateInterface>;
+export enum NotificationType {
+  ADD_NOTIFICATION = '@notification/ADD_NOTIFICATION',
+  REQUEST_ERROR = '@notification/REQUEST_ERROR',
 }
+
+/**
+ * Data types
+ */
+
+export interface NotificationData {
+  type: 'error' | 'warn' | 'success';
+  message: string;
+}
+
+export interface Error {
+  field?: string;
+  message: string;
+}
+
+export type RequestErrorData = Error | Error[];
+
+/**
+ * State type
+ */
+
+export interface NotificationState {}
