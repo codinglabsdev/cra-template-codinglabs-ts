@@ -1,6 +1,6 @@
 {
   "name": "codinglabs-typescript",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -107,7 +107,7 @@
     "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
     "react-app-rewired": "^2.1.5",
-    "cra-template-codinglabs-ts": "^1.0.4"
+    "cra-template-codinglabs-ts": "^1.0.5"
   },
   "config": {
     "commitizen": {
